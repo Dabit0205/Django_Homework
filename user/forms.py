@@ -1,9 +1,6 @@
 from django import forms
-from .models import user
-from django.contrib.auth.hashers import check_password
 
-
-class RegisterForm(forms.Form):
+class SignupForm(forms.Form):
     email = forms.EmailField(
         error_messages={'required': "이메일을 입력하세요."},
         max_length=64, label="이메일"
